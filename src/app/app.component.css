@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+/* this is fine */
+.bar:not(.bla) {
+  background-color: yellow;
+}
+
+/* line breaks in :not produces wrong CSS with webpack */
+.foo:not(
+  .bla) {
+    background-color: green;
+}
+
+.my-style {
+  background-color: red;
+}
